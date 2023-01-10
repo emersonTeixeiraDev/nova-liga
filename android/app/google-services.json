@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "392843798473",
+    "project_id": "nova-liga-sul-ba541",
+    "storage_bucket": "nova-liga-sul-ba541.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:392843798473:android:b14015fd1029445cd52a18",
+        "android_client_info": {
+          "package_name": "com.example.nova_liga_sul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "392843798473-lcms2d41hh8fb89mkjviefkbu2em8soh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApsgqR5IRHqMvwv-4IBPNLcjX06_ANQYI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "392843798473-lcms2d41hh8fb89mkjviefkbu2em8soh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "392843798473-9l8lac0tkpst963sdq4pm7ula197b0ub.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.novaLigaSul"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
