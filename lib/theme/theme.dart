@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 ThemeData theme() {
   final theme = ThemeData();
-  final textTheme = GoogleFonts.hindTextTheme(theme.textTheme);
+  final textTheme = GoogleFonts.montserratTextTheme(theme.textTheme);
 
   return ThemeData(
     textTheme: textTheme.copyWith(
