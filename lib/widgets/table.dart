@@ -34,7 +34,7 @@ class _TableTeamsState extends State<TableTeams> {
                             index < 8 ? const Color(0xff24ff24) : Colors.white,
                       ),
                       SizedBox(
-                        width: 15,
+                        width: 18,
                         child: Text(
                           '${index + 1}',
                           style: theme.textTheme.bodyMedium,

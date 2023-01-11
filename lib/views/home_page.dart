@@ -17,37 +17,31 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: CustomScrollView(
         slivers: <Widget>[
-          SliverSafeArea(
-            sliver: SliverAppBar(
-              backgroundColor: const Color(0xff006414),
-              pinned: false,
-              floating: false,
-              snap: false,
-              expandedHeight: 150.0,
-              flexibleSpace: FlexibleSpaceBar(
-                centerTitle: true,
-                title: Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/logoLigaLargue.png',
-                      width: 90,
-                      height: 90,
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Text(
-                      'Nova liga de veteranos',
-                      style: theme.textTheme.titleLarge,
-                    ),
-                  ],
-                ),
-              ),
+          SliverAppBar(
+            expandedHeight: 150,
+            backgroundColor: const Color(0xff006414),
+            flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
+              title: Row(
+                children: [
+                  Image.asset(
+                    'assets/images/logoLigaLargue.png',
+                    width: 80,
+                    height: 80,
+                  ),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  Text(
+                    'Nova liga de veteranos',
+                    style: theme.textTheme.titleLarge,
+                  ),
+                ],
+              ),
             ),
           ),
           const SliverToBoxAdapter(
-            child: const Rounds(),
+            child: Rounds(),
           ),
           SliverToBoxAdapter(
             child: IntrinsicHeight(
@@ -72,7 +66,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          TableTeams(),
+          const TableTeams(),
         ],
       ),
     );
