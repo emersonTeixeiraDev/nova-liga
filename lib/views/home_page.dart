@@ -15,6 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return Scaffold(
+      backgroundColor: const Color(0xffEDEEEF),
       body: CustomScrollView(
         slivers: <Widget>[
           SliverAppBar(
