@@ -35,17 +35,24 @@ class _RoundsState extends State<Rounds> {
               final roundsData = RoundsData.roundsData.elementAt(index);
               return Row(
                 children: [
+                  //   child:
                   Container(
-                    color: const Color(0xffEDEEEF),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
                     height: 189,
                     width: 350,
                     child: Card(
+                      borderOnForeground: true,
                       color: Colors.white,
                       child: Column(
                         children: [
-                          Text(
-                            roundsData.numberRound,
-                            style: theme.textTheme.bodyMedium,
+                          Padding(
+                            padding: const EdgeInsets.all(8),
+                            child: Text(
+                              roundsData.numberRound,
+                              style: theme.textTheme.bodyMedium,
+                            ),
                           ),
                           const SizedBox(
                             height: 10,
@@ -105,7 +112,7 @@ class _RoundsState extends State<Rounds> {
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
               );
             },
