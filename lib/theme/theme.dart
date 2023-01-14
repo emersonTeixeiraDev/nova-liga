@@ -8,7 +8,7 @@ ThemeData theme() {
   return ThemeData(
     textTheme: textTheme.copyWith(
       titleLarge: textTheme.titleLarge?.copyWith(
-        fontSize: 20,
+        fontSize: 16,
         color: Colors.white,
       ),
       bodyMedium: textTheme.bodyMedium?.copyWith(

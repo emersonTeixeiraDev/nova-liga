@@ -35,11 +35,7 @@ class _RoundsState extends State<Rounds> {
               final roundsData = RoundsData.roundsData.elementAt(index);
               return Row(
                 children: [
-                  //   child:
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
-                    ),
+                  SizedBox(
                     height: 189,
                     width: 350,
                     child: Card(
@@ -58,7 +54,7 @@ class _RoundsState extends State<Rounds> {
                             height: 10,
                           ),
                           Text(
-                            DateFormat('yyyy/MM/dd - KK:mm')
+                            DateFormat('dd/MM/yyyy - KK:mm')
                                 .format(roundsData.dateMacth),
                             style: theme.textTheme.bodyMedium,
                           ),
