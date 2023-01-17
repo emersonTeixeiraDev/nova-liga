@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:horizontal_data_table/horizontal_data_table.dart';
 import 'package:nova_liga_sul/data/team._data.dart';
@@ -38,20 +37,17 @@ class _TableTeamsState extends State<TableTeams> {
       },
     );
     //final theme = Theme.of(context);
-    return ScrollConfiguration(
-      behavior: ScrollConfiguration.of(context).copyWith(
-        dragDevices: {
-          PointerDeviceKind.touch,
-          PointerDeviceKind.mouse,
-        },
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 10,
       ),
-      child: Padding(
-        padding: const EdgeInsets.all(24),
+      child: Align(
+        alignment: Alignment.center,
         child: SizedBox(
-          width: 200,
+          width: 765,
           height: 530,
           child: HorizontalDataTable(
-            leftHandSideColumnWidth: 100,
+            leftHandSideColumnWidth: 65,
             rightHandSideColumnWidth: 700,
             isFixedHeader: true,
             headerWidgets: _getTitleWidget(),
@@ -72,6 +68,20 @@ class _TableTeamsState extends State<TableTeams> {
   }
 }
 
+Widget _getTitleItemWidget(String label, double width) {
+  return Container(
+    width: width,
+    height: 46,
+    padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
+    alignment: Alignment.centerLeft,
+    child: Text(
+      label,
+      style: const TextStyle(fontWeight: FontWeight.bold),
+      textAlign: TextAlign.start,
+    ),
+  );
+}
+
 List<Widget> _getTitleWidget() {
   return [
     _getTitleItemWidget('', 0),
@@ -89,43 +99,31 @@ List<Widget> _getTitleWidget() {
   ];
 }
 
-Widget _getTitleItemWidget(String label, double width) {
-  //titulos da tabela
-  return Container(
-    width: width,
-    height: 56,
-    padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
-    alignment: Alignment.centerLeft,
-    child: Text(
-      label,
-      style: const TextStyle(fontWeight: FontWeight.bold),
-      textAlign: TextAlign.start,
-    ),
-  );
-}
-
 Widget _generateFirstColumnRow(BuildContext context, int team) {
   final teamstable = TeamScoreData.teamstable;
-  return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-    Container(
-      width: 5,
-      height: 35,
-      color: team < 8 ? const Color(0xff24ff24) : Colors.white,
-    ),
-    SizedBox(
-      width: 21,
-      child: Text(
-        '${team + 1}',
-        //style: theme.textTheme.bodyMedium,
-        textAlign: TextAlign.center,
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      Container(
+        width: 5,
+        height: 35,
+        color: team < 8 ? const Color(0xff24ff24) : Colors.white,
       ),
-    ),
-    Image.asset(
-      teamstable[team].shield.toString(),
-      width: 20,
-      //height: 50,
-    ),
-  ]);
+      SizedBox(
+        width: 21,
+        child: Text(
+          '${team + 1}',
+          //style: theme.textTheme.bodyMedium,
+          textAlign: TextAlign.center,
+        ),
+      ),
+      Image.asset(
+        teamstable[team].shield.toString(),
+        width: 20,
+        //height: 50,
+      ),
+    ],
+  );
 }
 
 Widget _generateRightHandSideColumnRow(BuildContext context, int team) {
