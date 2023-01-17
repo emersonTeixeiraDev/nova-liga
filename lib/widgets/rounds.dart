@@ -18,9 +18,9 @@ class _RoundsState extends State<Rounds> {
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return SizedBox(
-      height: 350,
+      height: 300,
       child: Padding(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.all(8),
         child: ScrollConfiguration(
           behavior: ScrollConfiguration.of(context).copyWith(
             dragDevices: {
@@ -37,7 +37,7 @@ class _RoundsState extends State<Rounds> {
                 children: [
                   SizedBox(
                     height: 189,
-                    width: 350,
+                    width: 300,
                     child: Card(
                       borderOnForeground: true,
                       color: Colors.white,
@@ -112,9 +112,6 @@ class _RoundsState extends State<Rounds> {
                 ],
               );
             },
-            // separatorBuilder: (_, __) => const SizedBox(
-            //   height: 20,
-            // ),
           ),
         ),
       ),

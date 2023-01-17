@@ -17,6 +17,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: const Color(0xffEDEEEF),
       body: CustomScrollView(
+        shrinkWrap: true,
         slivers: <Widget>[
           SliverAppBar(
             expandedHeight: 150,
@@ -42,10 +43,10 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           const SliverToBoxAdapter(
-            child: Rounds(),
+            child: TableTeams(),
           ),
           const SliverToBoxAdapter(
-            child: TableTeams(),
+            child: Rounds(),
           ),
         ],
       ),
