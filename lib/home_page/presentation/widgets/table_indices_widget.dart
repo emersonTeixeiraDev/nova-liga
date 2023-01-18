@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TableIndices extends StatelessWidget {
-  const TableIndices({super.key});
+class TableIndicesWidget extends StatelessWidget {
+  const TableIndicesWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

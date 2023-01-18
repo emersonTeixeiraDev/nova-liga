@@ -1,7 +1,7 @@
-import '../models/teams_score_models.dart';
+import '../domain/models/teams_score_models.dart';
 
-class TeamScoreData {
-  static List<TeamsScore> teamstable = [
+class TeamScoreRepository {
+  static List<TeamsScore> teamsTableRepository = [
     TeamsScore(
       name: 'Familia Resenha',
       shield: 'assets/images/famíliaResenhaSmall.png',

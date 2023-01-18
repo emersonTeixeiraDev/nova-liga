@@ -1,7 +1,7 @@
-import '../models/rounds_models.dart';
+import '../domain/models/rounds_models.dart';
 
-class RoundsData {
-  static List<Rounds> roundsData = [
+class RoundsRepository {
+  static List<Rounds> roundsRepository = [
     Rounds(
       dateMacth: DateTime.utc(2023, 1, 17, 9, 30),
       nameLocal: 'FAM',

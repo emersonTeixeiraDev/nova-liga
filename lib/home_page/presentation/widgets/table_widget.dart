@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:horizontal_data_table/horizontal_data_table.dart';
-import 'package:nova_liga_sul/data/team._data.dart';
+import '../../data/team._repository.dart';
 
-class TableTeams extends StatefulWidget {
-  const TableTeams({super.key});
+class TableTeamswidget extends StatefulWidget {
+  const TableTeamswidget({super.key});
 
   @override
-  State<TableTeams> createState() => _TableTeamsState();
+  State<TableTeamswidget> createState() => _TableTeamswidgetState();
 }
 
-class _TableTeamsState extends State<TableTeams> {
-  final teamstable = TeamScoreData.teamstable;
+class _TableTeamswidgetState extends State<TableTeamswidget> {
+  final teamsTableRepository = TeamScoreRepository.teamsTableRepository;
 
   @override
   Widget build(BuildContext context) {
-    teamstable.sort(
+    teamsTableRepository.sort(
       (teamB, teamA) {
         int comparacaoPontos = teamA.points.compareTo(teamB.points);
         int comparacaoVitorias = teamA.victories.compareTo(teamB.victories);
@@ -53,7 +53,7 @@ class _TableTeamsState extends State<TableTeams> {
             headerWidgets: _getTitleWidget(),
             leftSideItemBuilder: _generateFirstColumnRow,
             rightSideItemBuilder: _generateRightHandSideColumnRow,
-            itemCount: teamstable.length,
+            itemCount: teamsTableRepository.length,
             rowSeparatorWidget: const Divider(
               color: Colors.grey,
               height: 2.0,
@@ -100,7 +100,7 @@ List<Widget> _getTitleWidget() {
 }
 
 Widget _generateFirstColumnRow(BuildContext context, int team) {
-  final teamstable = TeamScoreData.teamstable;
+  final teamstable = TeamScoreRepository.teamsTableRepository;
   return Row(
     mainAxisAlignment: MainAxisAlignment.center,
     children: <Widget>[
@@ -127,7 +127,7 @@ Widget _generateFirstColumnRow(BuildContext context, int team) {
 }
 
 Widget _generateRightHandSideColumnRow(BuildContext context, int team) {
-  final teamstable = TeamScoreData.teamstable;
+  final teamstable = TeamScoreRepository.teamsTableRepository;
   return Row(
     children: <Widget>[
       Container(

@@ -1,18 +1,17 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import '../../data/rounds_repository.dart';
 
-import '../data/rounds_data.dart';
-
-class Rounds extends StatefulWidget {
-  const Rounds({super.key});
+class Roundswidget extends StatefulWidget {
+  const Roundswidget({super.key});
 
   @override
-  State<Rounds> createState() => _RoundsState();
+  State<Roundswidget> createState() => _RoundswidgetState();
 }
 
-class _RoundsState extends State<Rounds> {
-  final roundsData = RoundsData.roundsData;
+class _RoundswidgetState extends State<Roundswidget> {
+  final roundsRepository = RoundsRepository.roundsRepository;
 
   @override
   Widget build(BuildContext context) {
@@ -30,9 +29,10 @@ class _RoundsState extends State<Rounds> {
           ),
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
-            itemCount: roundsData.length,
+            itemCount: roundsRepository.length,
             itemBuilder: (BuildContext context, int index) {
-              final roundsData = RoundsData.roundsData.elementAt(index);
+              final roundsData =
+                  RoundsRepository.roundsRepository.elementAt(index);
               return Row(
                 children: [
                   SizedBox(
