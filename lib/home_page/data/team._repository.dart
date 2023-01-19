@@ -59,9 +59,9 @@ class TeamScoreRepository {
       goalBalance: 0,
     ),
     TeamsScore(
-      name: 'INTERNACIONAL',
-      shield: 'assets/images/logoLigaSmall.png',
-      points: 0,
+      name: 'Independente',
+      shield: 'assets/images/independenteSmall.png',
+      points: 6,
       matches: 0,
       victories: 0,
       drawOrTie: 0,

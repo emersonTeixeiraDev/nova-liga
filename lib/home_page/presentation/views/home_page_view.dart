@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/header_home_widget.dart';
 import '../widgets/rounds_widget.dart';
 import '../widgets/table_widget.dart';
+import '../widgets/teams_widget.dart';
 
 class HomePageView extends StatefulWidget {
   const HomePageView({super.key});
@@ -25,6 +26,9 @@ class _HomePageViewState extends State<HomePageView> {
           ),
           SliverToBoxAdapter(
             child: TableTeamswidget(),
+          ),
+          SliverToBoxAdapter(
+            child: TeamsWidget(),
           ),
           SliverToBoxAdapter(
             child: Roundswidget(),
