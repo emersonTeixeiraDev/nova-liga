@@ -70,22 +70,32 @@ flutter:
      #olimpia
      - assets/images/olimpiaSmall.png
      - assets/images/olimpiaMedium.png
+     - assets/images/olimpiaLargue.png
 
      #Familia Resenha
      - assets/images/famíliaResenhaSmall.png
      - assets/images/famíliaResenhaMedium.png
+     - assets/images/famíliaResenhaLargue.png
 
      #Mundo Novo
      - assets/images/mundoGaúchoSmall.png
      - assets/images/mundoGaúchoMedium.png
+     - assets/images/mundoGaúchoLargue.png
 
      #Nova Vida
      - assets/images/novaVidaSmall.png
-     - assets/images/novaVIdaMedium.png
+     - assets/images/novaVidaMedium.png
+     - assets/images/novaVidaLargue.png
 
      #SC Jaimaica
      - assets/images/SCJamaicaSmall.png
      - assets/images/SCJamaicaMedium.png
+     - assets/images/SCJamaicaLargue.png
+
+     #Independente
+     - assets/images/independenteSmall.png
+     - assets/images/independenteMedium.png
+     - assets/images/independenteLargue.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

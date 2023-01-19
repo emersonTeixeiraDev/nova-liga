@@ -25,10 +25,10 @@ class RoundsRepository {
     Rounds(
       dateMacth: DateTime.utc(2023, 1, 17, 9, 30),
       nameLocal: 'JAM',
-      nameVisitor: 'INT',
+      nameVisitor: 'IND',
       numberRound: 'Rodada 1',
       localTeam: 'assets/images/SCJamaicaMedium.png',
-      visitorTeam: 'assets/images/logoLigaMedium.png',
+      visitorTeam: 'assets/images/independenteMedium.png',
       goalsLocalTeam: 0,
       goalsVisitorTeam: 0,
     ),
