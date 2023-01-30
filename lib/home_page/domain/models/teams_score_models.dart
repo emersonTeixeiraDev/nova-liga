@@ -24,5 +24,6 @@ class TeamsScore extends TeamIdentification {
       required this.redCard,
       required this.goalBalance,
       required super.shield,
-      required super.name});
+      required super.name})
+      : super(null);
 }

@@ -1,6 +1,6 @@
-class Players {
+class Player {
   final String playerName;
   final String position;
 
-  Players(this.playerName, this.position);
+  Player(this.playerName, this.position);
 }
