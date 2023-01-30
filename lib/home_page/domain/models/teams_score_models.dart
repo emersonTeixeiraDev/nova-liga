@@ -12,18 +12,18 @@ class TeamsScore extends TeamIdentification {
   final int redCard;
   final int goalBalance;
 
-  TeamsScore(
-      {required this.points,
-      required this.matches,
-      required this.victories,
-      required this.drawOrTie,
-      required this.defeats,
-      required this.goals,
-      required this.ownGoal,
-      required this.yellowCard,
-      required this.redCard,
-      required this.goalBalance,
-      required super.shield,
-      required super.name})
-      : super(null);
+  TeamsScore({
+    required this.points,
+    required this.matches,
+    required this.victories,
+    required this.drawOrTie,
+    required this.defeats,
+    required this.goals,
+    required this.ownGoal,
+    required this.yellowCard,
+    required this.redCard,
+    required this.goalBalance,
+    required super.shield,
+    required super.name,
+  }) : super(null);
 }
