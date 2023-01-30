@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:nova_liga_sul/routes/app_routes.dart';
-
 import '../../data/teams_identification_repository.dart';
 
 class TeamsWidget extends StatelessWidget {
@@ -9,12 +8,11 @@ class TeamsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final roundsRepository =
-        TeamsIdentificationRepository.teamsIdentificationRepository;
+    final team = TeamsIdentificationRepository.teamsIdentificationRepository;
     return Padding(
       padding: const EdgeInsets.only(top: 60, left: 8, right: 8),
       child: SizedBox(
-        height: 100,
+        height: 120,
         child: ScrollConfiguration(
           behavior: ScrollConfiguration.of(context).copyWith(
             dragDevices: {
@@ -24,9 +22,9 @@ class TeamsWidget extends StatelessWidget {
           ),
           child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: roundsRepository.length,
+              itemCount: team.length,
               itemBuilder: (BuildContext context, int index) {
-                final roundsRepository = TeamsIdentificationRepository
+                final team = TeamsIdentificationRepository
                     .teamsIdentificationRepository
                     .elementAt(index);
                 return Row(
@@ -40,11 +38,18 @@ class TeamsWidget extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             GestureDetector(
-                              onTap: () => Navigator.of(context)
-                                  .pushNamed(AppRoutes.playersDataPage),
-                              child: Image.network(
-                                roundsRepository.shield,
-                                height: 60,
+                              onTap: () => Navigator.of(context).pushNamed(
+                                  AppRoutes.playersDataPage,
+                                  arguments: team),
+                              child: Column(
+                                children: [
+                                  Image.asset(
+                                    team.shield,
+                                    height: 60,
+                                  ),
+                                  const SizedBox(height: 10),
+                                  Text(team.name)
+                                ],
                               ),
                             ),
                           ],
