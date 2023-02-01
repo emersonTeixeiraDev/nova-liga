@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../home_page/domain/models/teams_identification_models.dart';
 import '../../../home_page/presentation/widgets/header_home_widget.dart';
+import '../widgets/list_players.dart';
 
 class PlayersDataPageView extends StatelessWidget {
   const PlayersDataPageView({super.key});
@@ -36,38 +37,7 @@ class PlayersDataPageView extends StatelessWidget {
               ),
             ),
           ),
-          SliverList(
-              delegate: SliverChildBuilderDelegate(
-            childCount: item.players!.length,
-            (context, index) {
-              final player = item.players?.elementAt(index);
-              return Container(
-                color: Colors.transparent,
-                height: 60,
-                width: 50,
-                child: GestureDetector(
-                  onTap: () {},
-                  child: Card(
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(player!.playerName),
-                              Text(player.position)
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-              );
-            },
-          ))
+          const PLayerList()
         ],
       ),
     );
