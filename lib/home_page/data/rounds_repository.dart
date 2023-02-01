@@ -34,7 +34,7 @@ class RoundsRepository {
     ),
     Rounds(
       dateMacth: DateTime.utc(2023, 1, 17, 9, 30),
-      nameLocal: 'OLI',
+      nameLocal: 'OLi',
       nameVisitor: 'INT',
       numberRound: 'Rodada 1',
       localTeam: 'assets/images/olimpiaMedium.png',
