@@ -18,7 +18,7 @@ class RoundsRepository {
       nameVisitor: 'NOV',
       numberRound: 'Rodada 1',
       localTeam: 'assets/images/mundoGaúchoMedium.png',
-      visitorTeam: 'assets/images/novaVIdaMedium.png',
+      visitorTeam: 'ass',
       goalsLocalTeam: 0,
       goalsVisitorTeam: 0,
     ),
@@ -34,7 +34,7 @@ class RoundsRepository {
     ),
     Rounds(
       dateMacth: DateTime.utc(2023, 1, 17, 9, 30),
-      nameLocal: 'OLI',
+      nameLocal: 'OLi',
       nameVisitor: 'INT',
       numberRound: 'Rodada 1',
       localTeam: 'assets/images/olimpiaMedium.png',
