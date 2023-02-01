@@ -83,9 +83,7 @@ flutter:
      - assets/images/mundoGaúchoLargue.png
 
      #Nova Vida
-     - assets/images/novaVidaSmall.png
-     - assets/images/novaVidaMedium.png
-     - assets/images/novaVidaLargue.png
+     
 
      #SC Jaimaica
      - assets/images/SCJamaicaSmall.png
