@@ -18,7 +18,7 @@ class RoundsRepository {
       nameVisitor: 'NOV',
       numberRound: 'Rodada 1',
       localTeam: 'assets/images/mundoGaúchoMedium.png',
-      visitorTeam: 'assets/images/novaVIdaMedium.png',
+      visitorTeam: 'assets/images/novaVidaMedium.png',
       goalsLocalTeam: 0,
       goalsVisitorTeam: 0,
     ),
